@@ -5,6 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # 必要に応じてインストールするパッケージを追加してください
 RUN apt-get update && apt-get install -y \
     tzdata \
+    fonts-migmix \
 &&  ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
 &&  apt-get clean \
 &&  rm -rf /var/lib/apt/lists/*
